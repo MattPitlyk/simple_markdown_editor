@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'markdown_field.dart';
 import 'markdown_parse.dart';
 import 'markdown_toolbar.dart';
@@ -19,7 +20,10 @@ class MarkdownFormField extends StatefulWidget {
     this.cursorColor,
     this.focusNode,
     this.padding = const EdgeInsets.all(10),
+    this.styleSheet,
   }) : super(key: key);
+
+  final MarkdownStyleSheet? styleSheet;
 
   /// For enable toolbar options
   ///
@@ -149,6 +153,7 @@ class _MarkdownFormFieldState extends State<MarkdownFormField> {
                       child: MarkdownParse(
                         key: const ValueKey<String>("zmarkdownparse"),
                         data: _internalController.text,
+                        styleSheet: widget.styleSheet,
                       ),
                     ),
 

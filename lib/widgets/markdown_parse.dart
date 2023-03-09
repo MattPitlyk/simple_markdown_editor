@@ -113,18 +113,18 @@ class MarkdownParse extends StatelessWidget {
       controller: controller,
       shrinkWrap: shrinkWrap,
       syntaxHighlighter: syntaxHighlighter,
-      bulletBuilder: bulletBuilder ??
-          (int number, BulletStyle style) {
-            double? fontSize = Theme.of(context).textTheme.bodyText2?.fontSize;
-            return Text(
-              "◉",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: (fontSize != null) ? fontSize + 2 : fontSize,
-              ),
-            );
-          },
+      // bulletBuilder: bulletBuilder ??
+      //     (int number, BulletStyle style) {
+      //       double? fontSize = Theme.of(context).textTheme.bodyText2?.fontSize;
+      //       return Text(
+      //         "◉",
+      //         textAlign: TextAlign.center,
+      //         style: TextStyle(
+      //           color: Colors.blue,
+      //           fontSize: (fontSize != null) ? fontSize + 2 : fontSize,
+      //         ),
+      //       );
+      //     },
       styleSheetTheme: styleSheetTheme,
       extensionSet: md.ExtensionSet(
         md.ExtensionSet.gitHubFlavored.blockSyntaxes,
