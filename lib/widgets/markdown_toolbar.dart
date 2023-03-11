@@ -49,13 +49,13 @@ class MarkdownToolbar extends StatelessWidget {
             // show only if _isPreview is false
             if (!isPreview) ...[
               // select single line
-              ToolbarItem(
-                key: const ValueKey<String>("toolbar_selection_action"),
-                icon: FontAwesomeIcons.textWidth,
-                onPressedButton: () {
-                  toolbar.selectSingleLine();
-                },
-              ),
+              // ToolbarItem(
+              //   key: const ValueKey<String>("toolbar_selection_action"),
+              //   icon: FontAwesomeIcons.textWidth,
+              //   onPressedButton: () {
+              //     toolbar.selectSingleLine();
+              //   },
+              // ),
               // bold
               ToolbarItem(
                 key: const ValueKey<String>("toolbar_bold_action"),
@@ -134,13 +134,13 @@ class MarkdownToolbar extends StatelessWidget {
                 ],
               ),
               // emoji
-              ToolbarItem(
-                key: const ValueKey<String>("toolbar_emoji_action"),
-                icon: FontAwesomeIcons.solidSmile,
-                onPressedButton: () {
-                  _showModalSelectEmoji(context, controller.selection);
-                },
-              ),
+              // ToolbarItem(
+              //   key: const ValueKey<String>("toolbar_emoji_action"),
+              //   icon: FontAwesomeIcons.solidSmile,
+              //   onPressedButton: () {
+              //     _showModalSelectEmoji(context, controller.selection);
+              //   },
+              // ),
               // link
               ToolbarItem(
                 key: const ValueKey<String>("toolbar_link_action"),
@@ -179,13 +179,13 @@ class MarkdownToolbar extends StatelessWidget {
                 },
               ),
               // code
-              ToolbarItem(
-                key: const ValueKey<String>("toolbar_code_action"),
-                icon: FontAwesomeIcons.code,
-                onPressedButton: () {
-                  toolbar.action("`", "`");
-                },
-              ),
+              // ToolbarItem(
+              //   key: const ValueKey<String>("toolbar_code_action"),
+              //   icon: FontAwesomeIcons.code,
+              //   onPressedButton: () {
+              //     toolbar.action("`", "`");
+              //   },
+              // ),
               // line
               ToolbarItem(
                 key: const ValueKey<String>("toolbar_line_action"),
