@@ -155,21 +155,21 @@ class MarkdownToolbar extends StatelessWidget {
                 },
               ),
               // image
-              ToolbarItem(
-                key: const ValueKey<String>("toolbar_image_action"),
-                icon: FontAwesomeIcons.image,
-                onPressedButton: () {
-                  if (toolbar.checkHasSelection()) {
-                    toolbar.action("![enter image description here](", ")");
-                  } else {
-                    _showModalInputUrl(
-                      context,
-                      "![enter image description here](",
-                      controller.selection,
-                    );
-                  }
-                },
-              ),
+              // ToolbarItem(
+              //   key: const ValueKey<String>("toolbar_image_action"),
+              //   icon: FontAwesomeIcons.image,
+              //   onPressedButton: () {
+              //     if (toolbar.checkHasSelection()) {
+              //       toolbar.action("![enter image description here](", ")");
+              //     } else {
+              //       _showModalInputUrl(
+              //         context,
+              //         "![enter image description here](",
+              //         controller.selection,
+              //       );
+              //     }
+              //   },
+              // ),
               // blockquote
               ToolbarItem(
                 key: const ValueKey<String>("toolbar_blockquote_action"),

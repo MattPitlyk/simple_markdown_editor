@@ -92,6 +92,7 @@ class _EditorScreenState extends State<EditorScreen> {
                 enableToolBar: true,
                 emojiConvert: true,
                 autoCloseAfterSelectEmoji: false,
+                isPreview: true,
               ),
             ),
           ],

@@ -5,6 +5,8 @@ import 'markdown_parse.dart';
 import 'markdown_toolbar.dart';
 
 class MarkdownFormField extends StatefulWidget {
+  final bool isPreview;
+
   const MarkdownFormField({
     Key? key,
     this.controller,
@@ -21,6 +23,7 @@ class MarkdownFormField extends StatefulWidget {
     this.focusNode,
     this.padding = const EdgeInsets.all(10),
     this.styleSheet,
+    this.isPreview = false,
   }) : super(key: key);
 
   final MarkdownStyleSheet? styleSheet;
@@ -137,7 +140,8 @@ class _MarkdownFormFieldState extends State<MarkdownFormField> {
         ? widget.controller!
         : TextEditingController();
     _internalFocus = widget.focusNode != null ? widget.focusNode! : FocusNode();
-    _isPreview = false;
+    // _isPreview = false;
+    _isPreview = widget.isPreview;
     super.initState();
   }
 
